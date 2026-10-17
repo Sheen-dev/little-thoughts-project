@@ -191,27 +191,144 @@
   text-align: center;
 }
 
-@media (max-width: 600px) {
+/* Tablet */
+@media (max-width: 768px) {
   .header {
-    min-height: 68px;
-    padding: 14px 5%;
+    min-height: 70px;
+    padding: 16px 5%;
   }
 
   .logo {
-    font-size: 28px;
+    font-size: 30px;
   }
 
   .main-content {
-    min-height: calc(100vh - 68px);
+    min-height: calc(100vh - 70px);
+    padding: 32px 24px;
+  }
+
+  .quote-card {
+    width: 100%;
+    max-width: 600px;
+    padding: 32px 28px;
+  }
+
+  .quote-text {
+    font-size: clamp(30px, 5vw, 40px);
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+  }
+
+  .quote-author {
+    font-size: 24px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .header {
+    min-height: 64px;
+    padding: 12px 18px;
+  }
+
+  .logo {
+    font-size: 27px;
+  }
+
+  .theme-switch {
+    flex-shrink: 0;
+    transform: scale(0.92);
+    transform-origin: right center;
+  }
+
+  .main-content {
+    min-height: calc(100vh - 64px);
     padding: 24px 16px;
   }
 
   .quote-card {
-    padding: 28px 20px;
+    width: 100%;
+    padding: 28px 18px;
+    border-radius: 10px;
   }
 
   .quote-text {
-    font-size: 34px;
+    margin: 16px 0;
+    font-size: clamp(27px, 8vw, 34px);
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  .quote-author {
+    margin-top: 18px;
+    font-size: 23px;
+    overflow-wrap: anywhere;
+  }
+
+  .divider {
+    margin: 22px auto;
+  }
+
+  .new-quote-button {
+    max-width: 100%;
+    padding: 11px 18px;
+    font-size: 22px;
+  }
+
+  .footer {
+    margin-top: 22px;
+    font-size: 19px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .header {
+    padding: 12px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .main-content {
+    padding: 20px 12px;
+  }
+
+  .quote-card {
+    padding: 24px 14px;
+  }
+
+  .quote-text {
+    font-size: 27px;
+  }
+
+  .new-quote-button {
+    padding: 10px 14px;
+    font-size: 20px;
+  }
+}
+
+/* Short screens in landscape mode */
+@media (max-height: 500px) and (orientation: landscape) {
+  .main-content {
+    min-height: auto;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .quote-card {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .quote-text {
+    margin: 12px 0;
+  }
+
+  .footer {
+    margin-top: 16px;
   }
 }
 
